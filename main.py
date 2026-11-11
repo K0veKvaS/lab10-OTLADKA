@@ -13,7 +13,7 @@ def root():
 def hello():
     data = {"message": "Hello world!"}
     json_data = jsonable_encoder(data)
-    return JSONResponse(content=json_data)
+    return JSONResponse(content=json_data, status_code=201)
 
 @app.get("/about") #http://127.0.0.1:8000/about
 def about():
